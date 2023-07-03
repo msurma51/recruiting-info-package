@@ -1,11 +1,14 @@
 # Recruiting Info Scraper and Matcher: Project Overview
 * Takes pre-scraped roster data and matches it with historical recruiting data from ESPN, 247 and Rivals.
 * Uses Selenium to scrape desired recruiting data from the services mentioned above.
+* Matches roster data first to ESPN recruiting data, then to 247 and finally Rivals. Information linked to roster
+  entries in previous matching rounds is incorporated into matching algorithm in later rounds for more accurate scoring.
 * Matching algorithms use fuzzy matching, equivalence and other proximity scores to calculate a comparison score
  between a roster entry and all unmatched recruiting info entries from a given service.
 * Relevant information for the roster entry and top-scoring recruiting info entries are printed for visual
   comparison and manual selection of matches.
 * Thresholds for automatic matching and determination of non-matches are added as data accumulates over time.
+
 
 ## Process
 1. Run `get_players` to determine league of interest and populate/store roster info for players in that league.
